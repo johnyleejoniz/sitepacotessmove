@@ -6,38 +6,44 @@ const packages: PackageItem[] = [
   {
     name: 'PACOTE 100',
     price: '100',
-    description: 'O ponto de partida para lucrar com a mobilidade urbana.',
+    description: 'O Pacote 100 concede ao usuário uma licença de acesso inicial à plataforma SMOVE.',
     image: 'https://picsum.photos/id/183/600/400', // Abstract/Car related
     features: [
-      'Suporte exclusivo para afiliados',
-      'Acesso a treinamento de cadastros',
-      'PLR: Participação de Lucro Recorrente',
-      'Potencial de retorno de até 200% (variável diária)'
+      'Acesso ao sistema e área do usuário',
+      'Uso das ferramentas digitais da plataforma',
+      'Acesso a materiais de treinamento básico',
+      'Direito de participação no programa de afiliados S-MOVE',
+      'Possibilidade de receber comissões sobre vendas diretas de serviços e produtos da plataforma, conforme plano comercial vigente',
+      'Este pacote não configura investimento financeiro. Os ganhos estão condicionados exclusivamente ao desempenho individual em vendas e indicações.'
     ]
   },
   {
     name: 'PACOTE 500',
     price: '500',
-    description: 'Acelere seus ganhos e tenha acesso a nossa comunidade VIP.',
+    description: 'O Pacote 500 concede ao usuário uma licença profissional de uso da plataforma SMOVE, incluindo todos os benefícios do Pacote 100.',
     isPopular: true,
     image: 'https://picsum.photos/id/1071/600/400', // Car/Steering wheel
     features: [
-      'Todos os benefícios do Pacote 100',
-      'Acesso ao nosso grupo VIP exclusivo',
-      'PLR com maior potencial de ganho',
-      'Potencial de retorno de até 200% (variável diária)'
+      'Acesso a treinamentos avançados',
+      'Acesso a grupos exclusivos de suporte e mentoria',
+      'Ferramentas ampliadas para divulgação e gestão de equipe',
+      'Participação no programa de afiliados em nível profissional',
+      'Elegibilidade para comissões diferenciadas sobre a comercialização dos serviços e produtos da S-MOVE, conforme regras do plano comercial',
+      'Este pacote não representa aplicação financeira. Não há garantia de retorno. Os resultados dependem exclusivamente do esforço, dedicação e capacidade comercial do usuário.'
     ]
   },
   {
     name: 'PACOTE 1.000',
     price: '1.000',
-    description: 'A licença definitiva para ser um pioneiro S-MOVE em sua região.',
+    description: 'O Pacote 1.000 concede ao usuário uma licença master de uso da plataforma SMOVE, incluindo todos os benefícios dos pacotes anteriores.',
     image: 'https://picsum.photos/id/1033/600/400', // Urban/Business
     features: [
-      'Todos os benefícios anteriores',
-      'Licença Oficial da S-MOVE',
-      'Permissão para espaço físico e digital',
-      'Torne-se uma autoridade local e maximize seus lucros'
+      'Permissão para atuação como operador licenciado da marca S-MOVE',
+      'Acesso a treinamentos estratégicos e gestão de rede',
+      'Prioridade em recursos de expansão regional',
+      'Ferramentas completas de gestão comercial',
+      'Participação máxima no programa de afiliados e comissionamento da SMOVE, conforme plano comercial vigente',
+      'Este pacote caracteriza-se como licença de uso de software e modelo de negócio. Não constitui investimento, título de capitalização, valor mobiliário ou promessa de rentabilidade.'
     ]
   }
 ];
@@ -45,7 +51,7 @@ const packages: PackageItem[] = [
 const PricingSection: React.FC = () => {
   return (
     <section className="bg-black py-20 px-4 relative overflow-hidden">
-        {/* Background texture */}
+      {/* Background texture */}
       <div className="absolute inset-0 bg-cross-pattern opacity-50 pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto relative z-10">
@@ -55,8 +61,8 @@ const PricingSection: React.FC = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
           {packages.map((pkg, idx) => (
-            <div 
-              key={idx} 
+            <div
+              key={idx}
               className={`relative flex flex-col h-full bg-[#0a0f1c] rounded-2xl overflow-hidden border ${pkg.isPopular ? 'border-yellow-400 shadow-[0_0_20px_rgba(250,204,21,0.3)] scale-105 z-10' : 'border-gray-800'} transition-transform duration-300 hover:scale-[1.02]`}
             >
               {pkg.isPopular && (
@@ -64,16 +70,16 @@ const PricingSection: React.FC = () => {
                   Mais Popular
                 </div>
               )}
-              
+
               <div className="h-48 relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent z-10" />
-                <img 
-                    src={pkg.image} 
-                    alt={pkg.name} 
-                    className="w-full h-full object-cover opacity-60"
+                <img
+                  src={pkg.image}
+                  alt={pkg.name}
+                  className="w-full h-full object-cover opacity-60"
                 />
                 <h3 className="absolute bottom-4 left-0 right-0 text-center text-2xl font-black text-white z-20 uppercase tracking-wider drop-shadow-md">
-                    {pkg.name}
+                  {pkg.name}
                 </h3>
               </div>
 
@@ -92,18 +98,26 @@ const PricingSection: React.FC = () => {
                 </ul>
 
                 <div className="mt-auto text-center">
-                    <div className="flex items-baseline justify-center text-white mb-6">
-                        <span className="text-2xl font-bold text-yellow-400">R$</span>
-                        <span className="text-5xl font-black text-yellow-400 ml-1">{pkg.price}</span>
-                    </div>
+                  <div className="flex items-baseline justify-center text-white mb-6">
+                    <span className="text-2xl font-bold text-yellow-400">R$</span>
+                    <span className="text-5xl font-black text-yellow-400 ml-1">{pkg.price}</span>
+                  </div>
 
-                    <button className={`w-full py-4 rounded-full font-bold uppercase tracking-wide transition-colors ${pkg.isPopular ? 'bg-green-500 hover:bg-green-600 text-white' : 'bg-green-500 hover:bg-green-600 text-white'}`}>
-                        Quero o {pkg.name}
-                    </button>
+                  <button className={`w-full py-4 rounded-full font-bold uppercase tracking-wide transition-colors ${pkg.isPopular ? 'bg-green-500 hover:bg-green-600 text-white' : 'bg-green-500 hover:bg-green-600 text-white'}`}>
+                    Quero o {pkg.name}
+                  </button>
                 </div>
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Aviso Legal */}
+        <div className="mt-16 max-w-3xl mx-auto border border-gray-800 rounded-lg p-6 bg-[#0a0f1c]/80">
+          <h3 className="text-yellow-400 font-bold text-sm uppercase tracking-wider mb-3">⚠ Aviso Legal</h3>
+          <p className="text-gray-400 text-xs leading-relaxed">
+            A S-MOVE é uma plataforma de tecnologia e serviços. A aquisição de qualquer pacote refere-se exclusivamente à licença de uso do sistema, acesso a treinamentos e participação no programa de afiliados. Não se trata de investimento financeiro. Não há promessa, garantia ou projeção de ganhos. Os resultados dependem exclusivamente do desempenho individual de cada usuário.
+          </p>
         </div>
       </div>
     </section>
