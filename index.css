@@ -1,0 +1,21 @@
+/* S-MOVE Global Styles */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom pattern for background */
+.bg-cross-pattern {
+  background-color: #050505;
+  background-image: radial-gradient(#1f2937 1px, transparent 1px), radial-gradient(#1f2937 1px, transparent 1px);
+  background-size: 20px 20px;
+  background-position: 0 0, 10px 10px;
+}
