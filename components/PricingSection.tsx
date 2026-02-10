@@ -103,9 +103,14 @@ const PricingSection: React.FC = () => {
                     <span className="text-5xl font-black text-yellow-400 ml-1">{pkg.price}</span>
                   </div>
 
-                  <button className={`w-full py-4 rounded-full font-bold uppercase tracking-wide transition-colors ${pkg.isPopular ? 'bg-green-500 hover:bg-green-600 text-white' : 'bg-green-500 hover:bg-green-600 text-white'}`}>
+                  <a
+                    href={`https://wa.me/qr/R4BFSO52JPTIH1?text=${encodeURIComponent(`Olá! Tenho interesse no ${pkg.name} da S-MOVE. Gostaria de adquirir e saber mais informações.`)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`block w-full py-4 rounded-full font-bold uppercase tracking-wide transition-colors text-center ${pkg.isPopular ? 'bg-green-500 hover:bg-green-600 text-white' : 'bg-green-500 hover:bg-green-600 text-white'}`}
+                  >
                     Quero o {pkg.name}
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>

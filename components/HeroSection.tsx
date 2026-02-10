@@ -43,9 +43,14 @@ const HeroSection: React.FC = () => {
 
         {/* Main CTA */}
         <div className="pt-8">
-          <button className="bg-[#22c55e] hover:bg-[#16a34a] text-white font-black text-lg md:text-2xl py-4 px-8 rounded-full shadow-[0_0_20px_rgba(34,197,94,0.6)] transition-all transform hover:-translate-y-1 uppercase w-full md:w-auto">
+          <a
+            href={`https://wa.me/qr/R4BFSO52JPTIH1?text=${encodeURIComponent('Olá! Quero escolher meu pacote S-MOVE agora! Gostaria de mais informações.')}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-[#22c55e] hover:bg-[#16a34a] text-white font-black text-lg md:text-2xl py-4 px-8 rounded-full shadow-[0_0_20px_rgba(34,197,94,0.6)] transition-all transform hover:-translate-y-1 uppercase w-full md:w-auto text-center"
+          >
             Quero escolher meu pacote agora!
-          </button>
+          </a>
         </div>
 
         {/* Trust Badges */}
