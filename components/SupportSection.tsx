@@ -12,8 +12,10 @@ const SupportSection: React.FC = () => {
           É só clicar no botão abaixo e chamar nossa equipe comercial
         </p>
 
-        <a 
-          href="#" 
+        <a
+          href="https://wa.me/qr/R4BFSO52JPTIH1"
+          target="_blank"
+          rel="noopener noreferrer"
           className="inline-flex items-center gap-3 bg-[#25D366] hover:bg-[#20bd5a] text-white font-black text-lg md:text-xl py-4 px-8 rounded-full shadow-lg transition-transform transform hover:scale-105"
         >
           <MessageCircle className="w-8 h-8 fill-current" />
