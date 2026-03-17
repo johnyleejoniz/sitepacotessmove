@@ -1,5 +1,5 @@
 import React from 'react';
-import { ShieldCheck, Headphones, Lock, Play } from 'lucide-react';
+import { ShieldCheck, Headphones, Lock } from 'lucide-react';
 
 const HeroSection: React.FC = () => {
   return (
@@ -27,16 +27,16 @@ const HeroSection: React.FC = () => {
           ASSISTA AGORA: O plano para transformar o transporte em fonte de renda.
         </p>
 
-        {/* Video Placeholder */}
-        <div className="relative w-full aspect-video bg-black border-2 border-gray-800 rounded-lg shadow-2xl flex items-center justify-center group cursor-pointer overflow-hidden mt-8 max-w-3xl mx-auto">
-           {/* Simulate a thumbnail */}
-           <div className="absolute inset-0 bg-gradient-to-br from-gray-900 to-gray-800 opacity-90" />
-           <div className="absolute inset-0 flex items-center justify-center">
-              <div className="w-20 h-20 bg-[#2DD4BF] rounded-full flex items-center justify-center pl-2 shadow-[0_0_30px_rgba(45,212,191,0.6)] group-hover:scale-110 transition-transform duration-300">
-                <Play className="w-10 h-10 text-black fill-current" />
-              </div>
-           </div>
-           <p className="absolute bottom-4 text-gray-400 text-xs tracking-widest">VÍDEO EXPLICATIVO</p>
+        <div className="relative w-full aspect-video bg-black border-2 border-gray-800 rounded-lg shadow-2xl overflow-hidden mt-8 max-w-3xl mx-auto">
+          <iframe
+            src="https://player.vimeo.com/video/1141331837?badge=0&autopause=0&player_id=0&app_id=58479"
+            className="w-full h-full"
+            frameBorder="0"
+            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
+            title="smove-video"
+            allowFullScreen
+          />
         </div>
 
         {/* Main CTA */}
